@@ -1,0 +1,76 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import com.epam.java.HomeTask1.ButterToast;
+import com.epam.java.HomeTask1.CalculateTotalCost;
+import com.epam.java.HomeTask1.ChocolateBarfi;
+import com.epam.java.HomeTask1.KajuKatli;
+import com.epam.java.HomeTask1.SortSweets;
+import com.epam.java.HomeTask1.Sponge;
+import com.epam.java.HomeTask1.Sweet;
+
+import junit.framework.Assert;
+
+public class RunnerHomeTask1{
+	public static List<Sweet> list = new ArrayList<>();
+
+		double total;
+		 static Map<String,Sweet> mp=new HashMap<>();
+		
+		@BeforeClass
+		public static void setup() {
+		double total;
+		mp.put("Butter Toast", new ButterToast("ButterToast", "Toast", 99, 29.58));
+		
+		list.add(new ButterToast("ButterToast", "Toast", 99, 29.58));
+		list.add(new ChocolateBarfi("ChocolateBarfi", "Chocolate", 155, 44.32));
+		list.add(new KajuKatli("KajuKatli", "Katli",200, 201.21));
+		list.add(new Sponge("Sponge", "Bengal Sweet", 995, 71.12));
+		}
+		
+		@Test
+		public void CheckForButterToastCost() {
+		Sweet s= list.get(0);
+		double expected1=s.getsweetCost();	
+		Assert.assertEquals(200.0,expected1);
+		Assert.
+		list.get(0);
+		}
+		
+		@Test
+		public void CheckForKajuKatliCost() {
+			Sweet s=(Sweet) list.get(2);
+			double expected2=s.getsweetCost();	
+			Assert.assertEquals(578.97,expected2);
+		}
+		
+		@Test
+		public void CheckTotalCostForValidValue()
+		{
+			total=CalculateTotalCost.totalCost(list);
+			Assert.assertEquals(1877.697, total);
+		}
+
+		@Test
+		public void CheckTotalCostForInValidValue()
+		{
+			total=CalculateTotalCost.totalCost(list);
+			Assert.assertNotSame(7676, total);
+		}
+		
+		@AfterClass
+		public static void printListInSortedOrder() {
+			SortSweets.sortingSweets(list);
+			System.out.println(list);
+		}
+		
+		 
+}

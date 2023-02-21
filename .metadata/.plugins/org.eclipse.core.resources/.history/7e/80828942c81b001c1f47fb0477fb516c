@@ -1,0 +1,12 @@
+package com.epam.java.DesignPattern;
+
+public  class BuilderDesignPattern {
+	public static void main(String[] args) {
+		Employee e=new Employee.EmployeeBuilder("Styela", "12345678").setGender("F").setAge(24).build();
+		
+		System.out.println(e.getGender()+" "+e.getName());
+		System.out.println(e.getNumber());
+		System.out.println(e.getAge());
+
+	}
+}

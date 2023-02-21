@@ -1,0 +1,27 @@
+package com.epam.java.HomeTask1;
+
+public class KajuKatli extends Sweet{
+	public KajuKatli(String name, String type,int weight, double consSuga) {
+		super(name, type , weight, consSuga);
+	}
+
+	@Override
+	public double calculateCost() {
+
+		double cost;
+		if(this.getsweetweight()<100)
+		{
+			cost=370.97;
+		}
+		else if(this.getsweetweight()>=100 && this.getsweetweight()<=500)
+		{
+			cost=578.97;
+		}
+		else
+		{
+			cost=1200.87;
+		}
+	return cost;
+	}
+
+	}

@@ -1,0 +1,28 @@
+package com.epam.java.HomeTask1;
+
+import java.util.ArrayList;
+
+public class RunnerClass {
+	public static ArrayList<Sweet> list = new ArrayList<Sweet>();
+
+	public static void main(String[] args) {
+		
+		int total=0;
+		list.add(new ButterToast("ButterToast", "Toast", 99, 29.58));
+		list.add(new ChocolateBarfi("ChocolateBarfi", "Chocolate", 155, 44.32));
+		list.add(new KajuKatli("KajuKatli", "Katli",200, 201.21));
+		list.add(new Sponge("Sponge", "Bengal Sweet", 995, 71.12));
+
+		SortSweets.sortingSweets();
+		CalculateToalCost.totalCost(list);
+
+		System.out.println("*************Sweet Sorted by Weight**************");
+
+		for(int i=0;i<list.size();i++) {
+			System.out.println(list.get(i));
+
+		}
+		
+
+	}
+}

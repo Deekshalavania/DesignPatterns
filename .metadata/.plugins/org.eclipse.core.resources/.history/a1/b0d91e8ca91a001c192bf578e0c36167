@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+import com.epam.java.HomeTask1.ButterToast;
+import com.epam.java.HomeTask1.CalculateTotalCost;
+import com.epam.java.HomeTask1.ChocolateBarfi;
+import com.epam.java.HomeTask1.KajuKatli;
+import com.epam.java.HomeTask1.SortSweets;
+import com.epam.java.HomeTask1.Sponge;
+import com.epam.java.HomeTask1.Sweet;
+
+public class RunnerHomeTask1 {
+	public static ArrayList<Sweet> list = new ArrayList<Sweet>();
+
+	public static void main(String[] args) {
+		
+		@Before
+		public void setup() {
+		double total;
+		list.add(new ButterToast("ButterToast", "Toast", 99, 29.58));
+		list.add(new ChocolateBarfi("ChocolateBarfi", "Chocolate", 155, 44.32));
+		list.add(new KajuKatli("KajuKatli", "Katli",200, 201.21));
+		list.add(new Sponge("Sponge", "Bengal Sweet", 995, 71.12));
+		}
+		
+		SortSweets.sortingSweets();
+		total=CalculateTotalCost.totalCost(list);
+		
+		@Test
+		public void TestTotalCost()
+		{
+			assertEquals("43431.4",total)";"
+		}
+		
+		System.out.println("Total Cost of all the sweets is "+total);
+		
+		
+
+	}
+}

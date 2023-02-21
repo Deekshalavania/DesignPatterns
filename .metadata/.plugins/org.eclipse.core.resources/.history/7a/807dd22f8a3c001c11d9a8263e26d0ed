@@ -1,0 +1,62 @@
+package com.epam.java.coreFundamentals;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+
+interface ProductDefinition{
+	
+	void displayItems(List<Product> product);
+}
+class Product{
+	
+	String producName;
+	int producId;
+	double productPrice;
+	
+	public Product(String producName, int producId, double productPrice) {
+		super();
+		this.producName = producName;
+		this.producId = producId;
+		this.productPrice=productPrice;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [producName=" + producName + ", producId=" + producId + ", productPrice=" + productPrice + "]";
+	}
+	
+	
+}
+
+public class Java8Features implements ProductDefinition {
+
+	public static void main(String[] args) {
+		
+		List<Product> items= new ArrayList<>();
+		items.add(new Product("Television",1,45000.6));
+		items.add(new Product("Sound bar",2,25006));
+		items.add(new Product("Refrigerator",3,60000.92));
+		items.add(new Product("AC",4,36000));
+		
+		Java8Features jf =new Java8Features();
+		jf.displayItems(items);
+	
+		
+		Set<Double> filteredPriced=items.stream().filter(p->p.productPrice>27000.00)
+				.map(price->price.productPrice)
+				.collect(Collectors.toSet()); 
+				System.out.println(filteredPriced);
+	}
+
+	@Override
+	public void displayItems(List<Product> product) {
+		product.forEach(System.out::println);
+	   //product.forEach((i)->System.out.println());
+
+	}
+	
+
+}

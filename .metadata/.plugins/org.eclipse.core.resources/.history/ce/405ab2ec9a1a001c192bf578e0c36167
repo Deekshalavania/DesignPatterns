@@ -1,0 +1,20 @@
+package com.epam.java.HomeTask1;
+
+import java.util.List;
+
+public class CalculateToalCost {
+
+	
+	  public static void totalCost(List list ) {
+		  double total=0;
+			System.out.println("*************Total weight**************");
+
+			/*for(int i=0;i<list.size();i++) {
+
+				System.out.println(list.get(i));
+
+			}*/
+			
+			list.get(0);
+}
+}

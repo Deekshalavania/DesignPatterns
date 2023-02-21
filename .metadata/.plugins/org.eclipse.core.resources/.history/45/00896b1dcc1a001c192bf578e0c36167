@@ -1,0 +1,40 @@
+package com.epam.java.collection;
+
+import java.util.Date;
+
+public class Student {
+	    private long id;   
+	    private String name;   
+	    private Date dateOfBirth;    
+	    private String school; 
+
+}
+
+public class CustomStudentProgram{
+	public static void main(String[] args) {
+
+		HashMap<Student,String> StudentMap = new HashMap<Student,String>();  
+
+	    Student Student1 = new Student();    
+	    Student1.setId(1);    
+	    Student1.setName("Sachin");    
+	    Student1.setDateOfBirth(new Date(1987,2,1));    
+	    Student1.setSalary(new BigDecimal(100000));    
+
+	    StudentMap.put(Student1,"India");    
+
+	    // Some Business logic    
+	    // In the second Operation I am updating the same Student with the newly initailized Student Object
+
+	    Student Student2 = new Student();    
+	    Student2.setId(1);    
+	    Student2.setName("Sachin");    
+	    Student2.setDateOfBirth(new Date(1987,2,1));    
+	    Student2.setSalary(new BigDecimal(100000));  
+
+	    // Here we wanted to update the same Student to Japan
+	    StudentMap.put(Student2,"Japan");    
+
+	    System.out.println(StudentMap);
+	}
+}

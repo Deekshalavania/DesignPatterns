@@ -1,0 +1,44 @@
+package com.epam.java.homeTask2;
+
+import java.util.HashMap;
+import java.util.TreeMap;
+
+public class ProgramMap {
+
+	public static void main(String[] args) {
+
+		long start=System.nanoTime();
+		HashMap<String,Integer> m=new HashMap<String, Integer>();
+		m.put("One", 1);
+		m.put("Two", 2);
+		m.put("Three", 3);
+		m.put("Four", 4);
+		
+		m.remove("Three");
+		
+		long end=System.nanoTime();
+		
+		System.out.println("Time taken by HashMap to add/remove key value pairs is "+(end-start));
+		
+			
+		long start1=System.nanoTime();
+		TreeMap<String,Integer> tm=new TreeMap<String, Integer>();
+		tm.put("One", 1);
+		tm.put("Two", 2);
+		tm.put("Three", 3);
+		tm.put("Four", 4);
+		
+		m.remove("Three");
+	
+		long end1=System.nanoTime();
+
+				
+		System.out.println("Time taken by TreeMap to add/remove key value pairs is "+(end1-start1));
+		
+		long s=System.nanoTime();
+		TreeMap<String, Integer> t=new TreeMap<>(tm);
+		long e=System.nanoTime();
+		System.out.println("Sorting time by TreeMap is "+(e-s));
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EPAM_Selenium/src/test/resources/SpiceJetPageFactory/SpiceJet.feature&apos; to &apos;SearchFlightSpiceJet.feature&apos;" description="Rename resource &apos;SpiceJet.feature&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/resources/SpiceJetPageFactory/SpiceJet.feature" name="SearchFlightSpiceJet.feature" stamp="1633154446856" updateReferences="true"/>
+</session>

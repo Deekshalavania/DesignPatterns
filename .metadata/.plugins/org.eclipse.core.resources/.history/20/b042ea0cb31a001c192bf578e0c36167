@@ -1,0 +1,76 @@
+import java.util.ArrayList;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import com.epam.java.HomeTask1.ButterToast;
+import com.epam.java.HomeTask1.CalculateTotalCost;
+import com.epam.java.HomeTask1.ChocolateBarfi;
+import com.epam.java.HomeTask1.KajuKatli;
+import com.epam.java.HomeTask1.SortSweets;
+import com.epam.java.HomeTask1.Sponge;
+import com.epam.java.HomeTask1.Sweet;
+
+import junit.framework.Assert;
+
+public class RunnerHomeTask1 {
+	public static ArrayList<Sweet> list = new ArrayList<Sweet>();
+
+	//public static void main(String[] args) {
+		double total;
+		@BeforeClass
+		public static void setup() {
+		double total;
+		System.out.println("HI i m in setup");
+		list.add(new ButterToast("ButterToast", "Toast", 99, 29.58));
+		list.add(new ChocolateBarfi("ChocolateBarfi", "Chocolate", 155, 44.32));
+		list.add(new KajuKatli("KajuKatli", "Katli",200, 201.21));
+		list.add(new Sponge("Sponge", "Bengal Sweet", 995, 71.12));
+		
+		}
+		
+		@Test
+		public void CheckForButterToastCost() {
+			System.out.println("HI i m in Check butter toast cost");
+		Sweet s=(Sweet) list.get(0);
+		double expected1=s.getsweetCost();	
+		Assert.assertEquals(200.0,expected1);
+		list.get(0);
+		}
+		
+		@Ignore
+		@Test
+		public void CheckForKajuKatliCost() {
+			System.out.println("HI i m in kaju katli check cost");
+			Sweet s=(Sweet) list.get(0);
+			System.out.println(s);
+			double expected2=s.getsweetCost();	
+			System.out.println("EXPECTEDDDDDD ISSS"+expected2);
+			Assert.assertEquals(578.97,expected2);
+			}
+		@Test
+		public void CheckTotalCostForValidValue()
+		{
+
+			System.out.println("HI i m in CheckTotalCostForValidValue");
+
+			total=CalculateTotalCost.totalCost(list);
+			Assert.assertEquals(1877.697, total);
+		}
+		@Test
+		public void CheckTotalCostForInValidValue()
+		{
+
+			System.out.println("HI i m in CheckTotalCostForInValidValue");
+
+			total=CalculateTotalCost.totalCost(list);
+			Assert.assertNotSame(7676, total);
+		}
+		
+		/*
+		 * @Test public void TestSortingOrder() { SortSweets.sortingSweets(list);
+		 * //Assert.assertEquals(false, false); }
+		 */
+}

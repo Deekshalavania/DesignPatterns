@@ -1,0 +1,72 @@
+package com.epam.java.HomeTask1;
+
+	public abstract class Sweet  {
+
+		private String sweetName;
+		private String sweetType;
+		private double sweetCost;
+		private int sweetweight;
+		private double sweetCons;
+
+		public Sweet(String sweetName, String sweetType, int sweetweight, double sweetCons) {
+			this.sweetName = sweetName;
+			this.sweetType = sweetType;
+			this.sweetweight = sweetweight;
+			this.sweetCons = sweetCons;
+		}
+
+		public String getsweetName() {
+
+			return sweetName;
+		}
+
+		public void setsweetName(String sweetName) {
+
+			this.sweetName = sweetName;
+		}
+
+		public String getsweetType() {
+
+			return sweetType;
+		}
+
+		public void setsweetType(String sweetType) {
+			this.sweetType = sweetType;
+		}
+
+		public double getsweetCost() {
+
+			return sweetCost;
+		}
+
+		public void setsweetCost(double sweetCost) {
+			this.sweetCost = sweetCost;
+		}
+
+		public double getsweetweight() {
+
+			return sweetweight;
+		}
+
+		public void setsweetweight(int sweetweight) {
+			this.sweetweight = sweetweight;
+		}
+
+
+		public double getsweetCons() {
+			return sweetCons;
+		}
+
+		public void setsweetCons(double sweetCons) {
+			this.sweetCons = sweetCons;
+			
+		}
+
+		@Override
+		public String toString() {
+			return "sweetName=" + sweetName + ", sweetType=" + sweetType + ", sweetCost=" + sweetCost
+					+ ", sweetweight=" + sweetweight + ", sweetCons=" + sweetCons;
+		}
+		
+		
+	}

@@ -1,0 +1,38 @@
+
+package com.epam.java.arrayStringPrograms;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class DuplicateCharacters {
+
+	static void duplicateChars(String str){
+		
+		HashMap<Character,Integer> hm=new HashMap<Character, Integer>();
+		for(int i=0;i<str.length();i++)
+		{
+		if(!hm.containsKey(str.charAt(i)))
+			hm.put(str.charAt(i), 1);
+		else
+		{
+			hm.put(str.charAt(i),hm.get(str.charAt(i))+1);
+		}
+		}
+		for(Map.Entry m:hm.entrySet())
+		{
+			char key=(char) m.getKey();
+			int value=(int) m.getValue();
+			if(value>1)
+			{
+				System.out.println(key+ " "+ value);
+			}
+		}
+			
+	}
+	public static void main(String[] args) {
+
+		String str="Hello !! how are you all ?";
+		DuplicateCharacters.duplicateChars(str);
+	}
+}

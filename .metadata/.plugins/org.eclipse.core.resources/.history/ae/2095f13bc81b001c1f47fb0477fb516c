@@ -1,0 +1,77 @@
+package com.epam.java.DesignPattern;
+
+import com.epam.java.designPattern.Employee.EmployeeBuilder;
+
+class Employee{
+	//These are mandatory fields
+	private String name;
+	private String number;
+
+	//These are optional fields
+	private String gender;
+	private int age;
+
+
+
+
+	private Employee(EmployeeBuilder builder) {
+		this.name = builder.name;
+		this.number = builder.number;
+		this.gender = builder.gender;
+		this.age = builder.age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public static class EmployeeBuilder{
+		//These are mandatory fields
+			private String name;
+			private String number;
+
+			//These are optional fields
+			private String gender;
+			private int age;
+
+		public EmployeeBuilder(String name, String number) {
+			
+			this.name = name;
+			this.number = number;
+		}
+		
+		public EmployeeBuilder setGender(String gender) {
+			this.gender = gender;
+			return this;
+		}
+
+		public EmployeeBuilder setAge(int age) {
+			this.age = age;
+			return this;
+		}
+		public Employee build(){
+			return new Employee(this);
+		}
+		}	
+
+
+		}

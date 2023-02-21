@@ -1,0 +1,10 @@
+package com.epam.java.collection;
+
+public class CustomStudentProgram {
+
+	
+	public static void main(String[] args) {
+
+		
+	}
+}

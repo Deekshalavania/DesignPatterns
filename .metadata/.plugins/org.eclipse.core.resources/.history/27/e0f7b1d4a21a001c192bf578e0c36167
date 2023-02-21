@@ -1,0 +1,17 @@
+package com.epam.java.HomeTask1;
+
+import java.util.List;
+
+public class  CalculateToalCost  {
+
+	
+	  public static void totalCost(List list ) {
+	
+
+			for(int i=0;i<list.size();i++) {
+				list.get(i).get
+			}
+	
+	
+}
+}

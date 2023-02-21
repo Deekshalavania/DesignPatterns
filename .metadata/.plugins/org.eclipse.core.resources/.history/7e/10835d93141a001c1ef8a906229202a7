@@ -1,0 +1,26 @@
+package com.epam.java.HomeTask1;
+
+public class Sponge extends Sweet {
+
+	public Sponge(String name, String type, double cost, int weight, double consSuga) {
+		super(name, type, weight, consSuga);
+	}
+	@Override
+	public double calculateCost() {
+
+		double cost;
+		if(this.getsweetweight()<100)
+		{
+			cost=150.09;
+		}
+		else if(this.getsweetweight()>=100 && this.getsweetweight()<=500)
+		{
+			cost=300;
+		}
+		else
+		{
+			cost=550.867;
+		}
+	return cost;
+	}
+}

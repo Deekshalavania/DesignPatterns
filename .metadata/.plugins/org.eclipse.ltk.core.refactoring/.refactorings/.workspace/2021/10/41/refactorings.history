@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;EPAM_RestAssured&apos;" deleteContents="true" description="Delete resource &apos;EPAM_RestAssured&apos;" element1="/EPAM_RestAssured" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1633344571224"/>
+</session>

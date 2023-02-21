@@ -1,0 +1,48 @@
+package com.epam.java.collection;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListProgram {
+
+	public static void main(String args[])
+	{
+	ArrayList<String> al = new ArrayList<String>();
+
+    al.add("Berry");
+    al.add("Apple");
+    al.add("Kiwi");
+    al.add("Grapes");
+    al.add("Orange");
+
+    System.out.println("Original ArrayList:");
+    for(String str:al)
+       System.out.println(str);
+
+    al.add(0, "Banana");
+    al.add(1, "Mango");
+
+    System.out.println("ArrayList after add operation:");
+    for(String str:al)
+       System.out.println(str);
+
+    al.remove("Kiwi");
+    al.remove("Apple"); 
+
+    System.out.println("ArrayList after remove operation:");
+    for(String str:al)
+       System.out.println(str);
+
+    al.remove(1); 
+
+    System.out.println("Final ArrayList:");
+    for(String str:al)
+       System.out.println(str);
+    
+	Collections.sort(al);
+	for(String s: al)
+		System.out.prinltn(s);
+
+	}
+ }
+

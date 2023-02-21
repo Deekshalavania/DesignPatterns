@@ -1,0 +1,28 @@
+package com.epam.java.collection;
+
+import java.util.Collections;
+import java.util.LinkedList;
+
+public class LinkedListProgram {
+
+	public static void main(String[] args) {
+		LinkedList<String> l = new LinkedList<String>();
+		l.addFirst("A");
+		l.add("B");
+		l.add("C");
+		l.add("D");
+		l.add(2, "X");//This will add C at index 2
+		l.addLast("Z");
+		System.out.println("Original List before deleting elements");
+		System.out.println(l);
+		l.remove();
+		l.removeLast();
+		l.remove("C");
+		System.out.println("List After deleting first and last object");
+		System.out.println(l);
+		System.out.println("First object in linked list: "+ l.getFirst());
+		System.out.println("Last object in linked list: "+ l.peekLast());
+		Collections.sort(l);
+	}
+
+}

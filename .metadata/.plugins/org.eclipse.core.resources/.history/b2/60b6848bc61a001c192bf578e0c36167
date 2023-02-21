@@ -1,0 +1,9 @@
+package com.epam.java.collection;
+
+public class LinkedHashMapProgram {
+
+	public static void main(String[] args) {
+
+	}
+
+}

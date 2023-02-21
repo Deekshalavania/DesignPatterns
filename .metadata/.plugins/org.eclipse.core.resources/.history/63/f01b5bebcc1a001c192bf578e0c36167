@@ -1,0 +1,71 @@
+package com.epam.java.collection;
+
+import java.util.Date;
+import java.util.HashMap;
+
+public class Student {
+	    private long rollNumber;   
+	    private String studentNumber;   
+	    private Date dateOfBirth;    
+	    private String school;
+		public Student(long rollNumber, String studentNumber, Date dateOfBirth, String school) {
+			super();
+			this.rollNumber = rollNumber;
+			this.studentNumber = studentNumber;
+			this.dateOfBirth = dateOfBirth;
+			this.school = school;
+		}
+		public Student() {
+		}
+		public long getRollNumber() {
+			return rollNumber;
+		}
+		public void setRollNumber(long rollNumber) {
+			this.rollNumber = rollNumber;
+		}
+		public String getStudentNumber() {
+			return studentNumber;
+		}
+		public void setStudentNumber(String studentNumber) {
+			this.studentNumber = studentNumber;
+		}
+		public Date getDateOfBirth() {
+			return dateOfBirth;
+		}
+		public void setDateOfBirth(Date dateOfBirth) {
+			this.dateOfBirth = dateOfBirth;
+		}
+		public String getSchool() {
+			return school;
+		}
+		public void setSchool(String school) {
+			this.school = school;
+		} 
+	    
+	    
+
+}
+
+public class CustomStudentProgram{
+	public static void main(String[] args) {
+
+		HashMap<Student,String> StudentMap = new HashMap<Student,String>();  
+
+	    Student Student1 = new Student();    
+	    Student1.setRollNumber(21);    
+	    Student1.setStudentNumber("Deeksha Lavania");    
+	    Student1.setDateOfBirth(new Date(2001,12,11));    
+	    Student1.setSchool("RSP School");    
+	    
+	    Student Student2 = new Student();    
+	    Student2.setRollNumber(56);    
+	    Student2.setStudentNumber("Vishwendra Singh");    
+	    Student2.setDateOfBirth(new Date(2001,12,11));    
+	    Student2.setSchool("Army School");    
+
+	    StudentMap.put(Student1,"First rank"); 
+	    StudentMap.put(Student2,"Second rank");    
+
+	    System.out.println(StudentMap);
+	}
+}

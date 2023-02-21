@@ -1,0 +1,22 @@
+package com.epam.java.collection;
+
+import java.util.LinkedHashMap;
+
+public class LinkedHashMapProgram {
+
+	public static void main(String[] args) {
+        LinkedHashMap<String, String> linked_map =  new LinkedHashMap<String, String>(); 
+        linked_map.put("Red", "Stop"); 
+        linked_map.put("Green", "Go"); 
+        linked_map.put("Yellow", "Wait"); 
+   
+        System.out.println("Original LinkedHashMap:" + linked_map); 
+        System.out.println("LinkedHashMap 'linked_map' empty?:" + linked_map.isEmpty()); 
+        System.out.println("Size of the map: " + linked_map.size());
+        System.out.println("Value for key = 'Red':" + linked_map.get("Red")); 
+        System.out.println("linked_map contains key = 'Green':"+  linked_map.containsKey("Go")); 
+        System.out.println("linked_map contains value 'Yellow':" + linked_map.containsValue("Wait")); 
+        System.out.println("delete element 'one': " + linked_map.remove("one")); 
+        System.out.println("Updated linked_map:" + linked_map); 
+	}
+}

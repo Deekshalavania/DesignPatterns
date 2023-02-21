@@ -1,0 +1,16 @@
+package com.epam.java.HomeTask1;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class SortSweets {
+	
+	public static void sortingSweets(List l) {
+			Collections.sort(l, new Comparator<Sweet>() {
+				public int compare(Sweet s1, Sweet s2) {
+					return (int) (s1.getsweetweight()-s2.getsweetweight());
+				}
+			}
+			);
+}

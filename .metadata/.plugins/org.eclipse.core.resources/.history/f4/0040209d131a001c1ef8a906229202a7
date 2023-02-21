@@ -1,0 +1,11 @@
+package com.epam.java.HomeTask1;
+
+public class ButterToast extends Sweet {
+	public ButterToast(String name, String type, double cost, int weight, double consSuga) {
+		super(name, type, weight, consSuga);
+	}
+
+	void MyType() {
+			System.out.println("Hey I am ButterToast");		
+	}
+}

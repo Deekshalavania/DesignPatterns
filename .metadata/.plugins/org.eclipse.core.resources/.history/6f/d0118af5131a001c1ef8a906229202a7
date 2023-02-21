@@ -1,0 +1,25 @@
+package com.epam.java.HomeTask1;
+
+public class ChocolateBarfi extends Sweet{
+	public ChocolateBarfi(String name, String type, double cost, int weight, double consSuga) {
+		super(name, type, cost, weight, consSuga);
+	}
+	@Override
+	public double calculateCost() {
+
+		double cost;
+		if(this.getsweetweight()<100)
+		{
+			cost=200;
+		}
+		else if(this.getsweetweight()>=100 && this.getsweetweight()<=500)
+		{
+			cost=350;
+		}
+		else
+		{
+			cost=560;
+		}
+	return cost;
+	}
+}
